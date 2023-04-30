@@ -1,0 +1,31 @@
+{
+  "lint": {
+    "exclude": [
+      "README.md",
+      "docs/",
+      "_site/",
+      "_bin/"
+    ]
+  },
+  "fmt": {
+    "exclude": [
+      "README.md",
+      "docs/",
+      "_site/",
+      "_bin/"
+    ]
+  },
+  "tasks": {
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "build": "deno task lume",
+    "serve": "deno task lume -s"
+  },
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v1.16.2/",
+    "markdown-it-prism": "npm:markdown-it-prism@2.3.0"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "npm:preact"
+  }
+}

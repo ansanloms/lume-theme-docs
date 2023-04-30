@@ -1,0 +1,21 @@
+.toc {
+  line-height: 200%;
+  font-size: 72%;
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    margin-left: 1.2rem;
+
+    & > li {
+      & > a {
+        &.selected {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+@import url("https://unpkg.com/destyle.css@4.0.0/destyle.min.css");
+
+:root {
+  @media (prefers-color-scheme: light) {
+    --color-background: #eeeeee;
+    --color-text: #222222;
+    --color-decoration: #6f949a;
+
+    --pagefind-ui-primary: #393939;
+    --pagefind-ui-text: #393939;
+    --pagefind-ui-background: #ffffff;
+    --pagefind-ui-border: #eeeeee;
+    --pagefind-ui-tag: #eeeeee;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --color-background: #152028;
+    --color-text: #eeeeee;
+    --color-decoration: #6f949a;
+
+    --pagefind-ui-primary: #eeeeee;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: #293e4e;
+    --pagefind-ui-border: #152028;
+    --pagefind-ui-tag: #152028;
+  }
+
+  --font-family-default: system-ui, sans-serif;
+  --font-family-code: monospace;
+  --font-family-icon: "Material Symbols Outlined";
+
+  --color-background: var(--color-background);
+  --color-text: var(--color-text);
+  --color-decoration: var(--color-decoration);
+}
+
+* {
+  scrollbar-color: var(--color-decoration) rgb(0 0 0 / 10%);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+    height: 0.8rem;
+    background: rgb(0 0 0 / 10%);
+    border-radius: 0.2rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 0.2rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-decoration);
+    border-radius: 0.2rem;
+  }
+}
+
+html {
+  font: 62.5% var(--font-family-default);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  text-size-adjust: 100%;
+}
+
+body {
+  font: 1.6rem var(--font-family-default);
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+iframe {
+  border: none;
+}
+

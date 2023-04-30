@@ -1,0 +1,53 @@
+.container {
+  display: grid;
+  grid-template:
+    "header header"
+    "menu   content" 1fr
+    / 32rem 1fr;
+  height: 100vh;
+  gap: 2.4rem 3.6rem;
+
+  .header {
+    padding: 1.2rem 1.2rem 0;
+    grid-area: header;
+    box-sizing: border-box;
+  }
+
+  .menu {
+    padding: 0 0 0 1.2rem;
+    grid-area: menu;
+    overflow: hidden auto;
+  }
+
+  .content {
+    grid-area: content;
+    overflow: auto;
+  }
+}
+
+.page {
+  display: grid;
+  grid-template:
+    "breadcrumb breadcrumb"
+    "article    toc" 1fr
+    / calc(100% - 24rem - 1.2rem) 24rem;
+  align-items: start;
+  gap: 1.2rem;
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 4rem;
+
+  .breadcrumb {
+    grid-area: breadcrumb;
+  }
+
+  .article {
+    grid-area: article;
+  }
+
+  .toc {
+    grid-area: toc;
+    position: sticky;
+    top: 0;
+  }
+}
