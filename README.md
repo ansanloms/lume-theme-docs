@@ -8,7 +8,7 @@ Set up [Lume](https://lume.land/docs/overview/installation/) and add the followi
 
 ```typescript
 import lume from "lume/mod.ts";
-import docs from "https://raw.githubusercontent.com/lumeland/theme-simple-blog/main/mod.ts";
+import docs from "https://raw.githubusercontent.com/ansanloms/lume-theme-docs/main/mod.ts";
 
 const site = lume();
 

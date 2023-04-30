@@ -42,6 +42,7 @@ site.use(docs({
 }));
 
 site.ignore("README.md");
+site.remoteFile("docs/index.md", "README.md");
 
 site.preprocess([".html"], (page) => {
   if (
