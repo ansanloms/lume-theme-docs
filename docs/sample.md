@@ -22,7 +22,7 @@ This is a [link](https://example.com).
 
 ## Code
 
-This is an inline code.
+This is an `inline code` .
 
 ```javascript
 // This is a code block.
