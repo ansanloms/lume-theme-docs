@@ -140,11 +140,22 @@
 
   code {
     font-family: var(--font-family-code);
+    color: var(--color-decoration);
+    border: 1px solid var(--color-decoration);
+    border-radius: 0.4rem;
+    padding: 0.4rem;
   }
 
   pre {
     margin: 1rem 0;
     overflow: auto;
+
+    code {
+      color: unset;
+      border: unset;
+      border-radius: unset;
+      padding: unset;
+    }
   }
 
   details {
