@@ -31,6 +31,17 @@ const menuItem = (navigation: NavData, page: CustomPage, deps: number) => {
     getCurrentHref(navigation),
   );
 
+  const children = (navigation.children || []).sort((a, b) => {
+    const aSitdebarPosition = Number(a.data?.sidebar_position || 0);
+    const bSitdebarPosition = Number(b.data?.sidebar_position || 0);
+
+    if (aSitdebarPosition === bSitdebarPosition) {
+      return 0;
+    }
+
+    return aSitdebarPosition > bSitdebarPosition ? 1 : -1;
+  });
+
   return (
     <details open={selected}>
       <summary className={navigation.children ? undefined : "empty"}>
@@ -38,9 +49,9 @@ const menuItem = (navigation: NavData, page: CustomPage, deps: number) => {
           {navigation.data?.title || navigation.slug}
         </a>
       </summary>
-      {navigation.children && (
+      {children && (
         <ul>
-          {navigation.children.map((child, index) => (
+          {children.map((child, index) => (
             <li key={`${deps}-${index}`}>
               {menuItem(child, page, deps + 1)}
             </li>
