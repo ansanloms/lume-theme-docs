@@ -21,11 +21,11 @@
     "serve": "deno task lume -s"
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.18.4/",
+    "lume/": "https://deno.land/x/lume@v2.0.1/",
     "markdown-it-prism": "npm:markdown-it-prism@2.3.0"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "npm:preact"
+    "jsxImportSource": "npm:preact@10.19.3"
   }
 }
