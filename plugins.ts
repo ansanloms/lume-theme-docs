@@ -66,22 +66,23 @@ export default function (userOptions?: Partial<Options>) {
                 '--pretty=format:"%at,%an"',
                 page.src.entry.src,
               ],
-              windowsRawArguments: true,
             });
 
             try {
               const { success, stdout } = await command.output();
 
               if (success) {
-                console.log(decoder.decode(stdout));
-                const [lastUpdated, author] = JSON.parse(decoder.decode(stdout))
+                const [lastUpdated, author] = decoder.decode(stdout).replaceAll(
+                  '"',
+                  "",
+                )
                   .split(
                     ",",
                     2,
                   )
                   .map((v, i) => {
                     if (i === 0) {
-                      return new Date(Number(v.trim()));
+                      return new Date(Number(v.trim()) * 1000);
                     } else {
                       return v.trim();
                     }
