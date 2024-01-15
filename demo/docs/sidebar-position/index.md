@@ -9,4 +9,3 @@ sidebar_position: 1
 ```
 
 Pages without a specified `sidebar_position` will be displayed beneath it.
-
