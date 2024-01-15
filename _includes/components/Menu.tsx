@@ -31,16 +31,21 @@ const menuItem = (navigation: NavData, page: CustomPage, deps: number) => {
     getCurrentHref(navigation),
   );
 
-  const children = (navigation.children || []).sort((a, b) => {
-    const aSitdebarPosition = Number(a.data?.sidebar_position || 0);
-    const bSitdebarPosition = Number(b.data?.sidebar_position || 0);
+  const children = [
+    ...(navigation.children || []).filter((child) =>
+      !Number.isNaN(Number(child.data?.sidebar_position))
+    ).sort((a, b) => {
+      const aSitdebarPosition = Number(a.data?.sidebar_position);
+      const bSitdebarPosition = Number(b.data?.sidebar_position);
 
-    if (aSitdebarPosition === bSitdebarPosition) {
-      return 0;
-    }
-
-    return aSitdebarPosition > bSitdebarPosition ? 1 : -1;
-  });
+      return aSitdebarPosition === bSitdebarPosition
+        ? 0
+        : (aSitdebarPosition > bSitdebarPosition ? 1 : -1);
+    }),
+    ...(navigation.children || []).filter((child) =>
+      Number.isNaN(Number(child.data?.sidebar_position))
+    ),
+  ];
 
   return (
     <details open={selected}>
