@@ -38,6 +38,7 @@ site.use(docs({
   menu: {
     level: 0,
   },
+  showAuthor: true,
 }));
 
 site.preprocess([".html"], (pages) => {

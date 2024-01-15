@@ -1,6 +1,7 @@
 {
   "lint": {
     "exclude": [
+      "demo/",
       "_site/",
       "_bin/"
     ]
@@ -8,6 +9,7 @@
   "fmt": {
     "proseWrap": "preserve",
     "exclude": [
+      "demo/",
       "_site/",
       "_bin/"
     ]

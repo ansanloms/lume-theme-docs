@@ -28,9 +28,9 @@
 .page {
   display: grid;
   grid-template:
-    "breadcrumb breadcrumb"
+    "breadcrumb breadcrumb" auto
     "article    toc" 1fr
-    / calc(100% - 24rem - 1.2rem) 24rem;
+    "footer     _" auto / calc(100% - 24rem - 1.2rem) 24rem;
   align-items: start;
   gap: 1.2rem;
   height: 100%;
@@ -49,5 +49,10 @@
     grid-area: toc;
     position: sticky;
     top: 0;
+  }
+
+  footer {
+    grid-area: footer;
+    margin-top: 4rem;
   }
 }

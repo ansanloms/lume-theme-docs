@@ -8,11 +8,12 @@ interface Props {
 }
 
 export default (props: Props) => {
-  const site = props.page.data.metas?.site || "";
+  const lang = props.page.data.metas?.lang?.toString() || "en";
+  const site = props.page.data.metas?.site?.toString() || "";
   const title = props.page.data.title || "";
 
   return (
-    <html lang={props.page.data.metas?.lang}>
+    <html lang={lang}>
       <head>
         <meta charSet="UTF-8" />
         <meta

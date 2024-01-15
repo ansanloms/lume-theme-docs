@@ -60,6 +60,16 @@ export interface CustomPageData extends PageData {
      */
     level?: number;
   };
+
+  /**
+   * Author.
+   */
+  author?: string;
+
+  /**
+   * Last updated.
+   */
+  lastUpdated?: Date;
 }
 
 export interface CustomPage extends Page {
