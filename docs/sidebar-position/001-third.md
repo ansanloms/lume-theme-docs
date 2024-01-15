@@ -6,6 +6,6 @@ sidebar_position: 3
 
 ```md
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 ```
