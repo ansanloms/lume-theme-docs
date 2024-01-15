@@ -5,8 +5,6 @@ interface Props {
 }
 
 export default (props: Props) => {
-  console.log(props.page.data.author);
-
   const lastUpdated = props.page.data.lastUpdated
     ? `Last updated on ${
       props.page.data.lastUpdated.toLocaleDateString("en-us", {

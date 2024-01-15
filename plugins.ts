@@ -59,7 +59,7 @@ export default function (userOptions?: Partial<Options>) {
       site.preprocess([".html"], async (pages) => {
         for (const page of pages) {
           if (page.src.entry?.type === "file") {
-            const command = new Deno.Command("git", {
+            const command = new Deno.Command("/usr/bin/git", {
               args: [
                 "log",
                 "-1",
@@ -73,6 +73,7 @@ export default function (userOptions?: Partial<Options>) {
               const { success, stdout } = await command.output();
 
               if (success) {
+                console.log(decoder.decode(stdout))
                 const [lastUpdated, author] = decoder.decode(stdout).split(
                   ",",
                   2,
