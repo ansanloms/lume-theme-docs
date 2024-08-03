@@ -2,6 +2,10 @@
 @import url("https://unpkg.com/destyle.css@4.0.0/destyle.min.css");
 
 :root {
+  --font-family-default: system-ui, sans-serif;
+  --font-family-code: monospace;
+  --font-family-icon: "Material Symbols Outlined";
+
   @media (prefers-color-scheme: light) {
     --color-background: #eeeeee;
     --color-text: #222222;
@@ -25,14 +29,6 @@
     --pagefind-ui-border: #152028;
     --pagefind-ui-tag: #152028;
   }
-
-  --font-family-default: system-ui, sans-serif;
-  --font-family-code: monospace;
-  --font-family-icon: "Material Symbols Outlined";
-
-  --color-background: var(--color-background);
-  --color-text: var(--color-text);
-  --color-decoration: var(--color-decoration);
 }
 
 * {

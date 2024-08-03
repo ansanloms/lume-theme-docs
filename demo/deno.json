@@ -13,21 +13,19 @@
     ]
   },
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s"
   },
   "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "npm:preact@10.23.1",
     "types": [
       "lume/types.ts"
     ]
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.0.3/",
+    "lume/": "https://deno.land/x/lume@v2.2.4/",
     "markdown-it-prism": "npm:markdown-it-prism@2.3.0"
-  },
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "npm:preact@10.19.3"
   }
 }
