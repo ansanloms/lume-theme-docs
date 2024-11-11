@@ -1,0 +1,1 @@
+.breadcrumb{display:flex;gap:1.2rem;align-items:center}.breadcrumb a{text-decoration:none}.breadcrumb li{display:flex;gap:1.2rem;align-items:center}.breadcrumb li:not(:last-child)::after{font-family:var(--font-family-icon);content:"chevron_right"}
