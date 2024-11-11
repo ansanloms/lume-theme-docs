@@ -1,17 +1,12 @@
 {
-  "lint": {
-    "exclude": [
-      "_site/",
-      "_bin/"
-    ]
-  },
+  "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
   "fmt": {
-    "proseWrap": "preserve",
-    "exclude": [
-      "_site/",
-      "_bin/"
-    ]
+    "proseWrap": "preserve"
   },
+  "exclude": [
+    "_site/",
+    "_bin/"
+  ],
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
@@ -19,13 +14,13 @@
   },
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "npm:preact@10.23.1",
+    "jsxImportSource": "npm:preact@10.24.3",
     "types": [
       "lume/types.ts"
     ]
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.2.4/",
+    "lume/": "https://deno.land/x/lume@v2.4.2/",
     "markdown-it-prism": "npm:markdown-it-prism@2.3.0"
   }
 }

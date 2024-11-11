@@ -2,7 +2,7 @@ name: Publish on GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -13,16 +13,17 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Deno environment
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
+          deno-version: v2.x
 
       - name: Build site
-        run: deno task --cwd ./demo build
+        run: deno task --cwd ./examples build
 
       - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v2.0.1
+        uses: crazy-max/ghaction-github-pages@v4
         with:
-          build_dir: ./demo/_site
+          target_branch: gh-pages
+          build_dir: ./examples/_site
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

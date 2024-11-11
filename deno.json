@@ -1,26 +1,21 @@
 {
-  "lint": {
-    "exclude": [
-      "demo/",
-      "_site/",
-      "_bin/"
-    ]
-  },
+  "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+  "lock": false,
   "fmt": {
-    "proseWrap": "preserve",
-    "exclude": [
-      "demo/",
-      "_site/",
-      "_bin/"
-    ]
+    "proseWrap": "preserve"
   },
+  "exclude": [
+    "examples/",
+    "_site/",
+    "_bin/"
+  ],
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s"
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.2.4/"
+    "lume/": "https://deno.land/x/lume@v2.4.2/"
   },
   "compilerOptions": {
     "types": [
